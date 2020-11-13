@@ -13,3 +13,15 @@ class CategoryTestClass(TestCase):
         self.flowers.save_category()
         categories = Category.objects.all()
         self.assertTrue(len(categories)>0)   
+
+class LocationTestClass(TestCase):
+    def setUp(self):
+        self.nairobi = Location(name='Nairobi')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nairobi,Location)) 
+
+    def test_save_method(self):
+        self.nairobi.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations)>0)               
