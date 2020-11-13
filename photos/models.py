@@ -8,3 +8,10 @@ class Image(models.Model):
     image_location=models.ForeignKey('Location',on_delete=models.CASCADE)
     image_category=models.ForeignKey('Category',on_delete=models.CASCADE)
 
+class Location(models.Model):
+    name = models.CharField(max_length = 60)
+
+class Category(models.Model):
+    name = models.CharField(max_length = 60)
+
+        
