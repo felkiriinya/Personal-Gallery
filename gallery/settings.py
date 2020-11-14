@@ -76,7 +76,7 @@ INSTALLED_APPS = [
 # Cloudinary settings
 CLOUDINARY = {
   'cloud_name': 'duhceor4r',  
-  'api_key': '988552584751394',  
+     'api_key': '988552584751394',  
   'api_secret': 'grnCc_TFy5WFWteERzMJRj3t88k',  
 }
 MIDDLEWARE = [

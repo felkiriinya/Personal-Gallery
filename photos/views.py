@@ -3,7 +3,22 @@ from django.http  import HttpResponse,Http404
 from .models import Image,Location,Category
 
 # Create your views here.
+from django import forms
+from django.http import HttpResponse
 
+from cloudinary.forms import cl_init_js_callbacks     
+from .forms import PhotoForm
+
+def upload(request):
+  context = dict( backend_form = PhotoForm())
+
+  if request.method == 'POST':
+    form = PhotoForm(request.POST, request.FILES)
+    context['posted'] = form.instance
+    if form.is_valid():
+        form.save()
+
+  return render(request, 'upload.html', context)
 def photos(request):
     images = Image.get_images()
     locations = Location.objects.all()
