@@ -15,13 +15,13 @@ def photos_by_location(request, location_id):
 
 def search_images(request):
 
-    if 'category' in request.GET and request.GET["category"]:
-        search_image = request.GET.get("category")
-        searched_images = Image.search_image(search_image)
-        message = f"{search_image}"
+    if 'photo' in request.GET and request.GET["photo"]:
+        category= request.GET.get("photo")
+        searched_images = Image.search_image(category)
+        message = f"{category}"
 
-        return render(request, 'all-photos/search.html',{"message":message, "categories":search_images})
+        return render(request, 'all-photos/search.html',{"message":message, "photos":searched_images})
 
-        else:
-            message = "You have not searched for any picture"
-            return render(request, 'all-photos/search.html',{"message":message})   
+    else:
+        message = "You have not searched for any picture"
+        return render(request, 'all-photos/search.html',{"message":message})   

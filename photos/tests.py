@@ -49,7 +49,12 @@ class ImageTestClass(TestCase):
     def test_filter_by_location(self):
         test_location_id = 6
         images_location = Image.filter_by_location(test_location_id) 
-        self.assertTrue(len(images_location) == 0)   
+        self.assertTrue(len(images_location) == 0)  
+
+    def test_filter_by_category(self):
+        test_category_id = 6
+        images_category = Image.filter_by_category(test_category_id) 
+        self.assertTrue(len(images_category) == 0)       
 
     def test_delete_image(self):
         self.new_image.save_image()
