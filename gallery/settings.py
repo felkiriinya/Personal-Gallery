@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 from pathlib import Path
 
@@ -34,6 +37,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'photos.apps.PhotosConfig',
     'bootstrap3',
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-
+# Cloudinary settings
+CLOUDINARY = {
+  'cloud_name': 'duhceor4r',  
+  'api_key': '988552584751394',  
+  'api_secret': 'grnCc_TFy5WFWteERzMJRj3t88k',  
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

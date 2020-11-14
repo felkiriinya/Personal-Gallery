@@ -1,7 +1,13 @@
 from django.db import models
+from django.db import models
+from cloudinary.models import CloudinaryField
 
-# Create your models here.
+class Photo(models.Model):
+  image = CloudinaryField('image')
+
+
 class Image(models.Model):
+    
     image=models.ImageField(upload_to = 'photos/')
     image_name=models.CharField(max_length =60)
     image_description=models.TextField()
