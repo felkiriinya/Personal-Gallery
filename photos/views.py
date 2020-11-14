@@ -8,3 +8,7 @@ def photos(request):
     locations = Location.objects.all()
     categories = Category.objects.all()
     return render(request, 'all-photos/all_photos.html',{"images":images,"locations":locations,"categories":categories})
+
+def photos_by_location(request, location_id):
+    images = Image.filter_by_location(location_id) 
+    return render(request,'all-photos/location.html',{"images":images})   
