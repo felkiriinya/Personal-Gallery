@@ -50,3 +50,11 @@ class ImageTestClass(TestCase):
         test_location_id = 6
         images_location = Image.filter_by_location(test_location_id) 
         self.assertTrue(len(images_location) == 0)   
+
+    def test_delete_image(self):
+        self.new_image.save_image()
+        image1 = Image.objects.all()
+        self.assertEqual(len(image1),1)
+        self.new_image.delete_image()
+        image2 = Image.objects.all()
+        self.assertEqual(len(image2),0)    
