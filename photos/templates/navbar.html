@@ -15,9 +15,27 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="" style="color: rgb(235, 230, 230); font-size: 30px;"> Gallery</a>
-        
+        <ul class="navbar-brand" style="list-style: none;  font-size: 20px; color: white !important;  ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white !important; text-decoration: none; padding-left: 15%;">
+              Location
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% for location in locations %}
+             
+                <a href="" class="available dropdown-item" style="color: red; ">
+                  {{location.name}},
+          </a>
+              
+                
+               {% endfor %} 
+            </div>
+          </li>
+        </ul>
       </div>
-  
+      
+       
+     
       <!-- Adding a search form  -->
       <div class="col-sm-4 col-md-4 navbar-right">
   

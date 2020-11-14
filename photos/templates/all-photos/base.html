@@ -5,13 +5,14 @@
 <head>
     <meta charset="UTF-8">
     {%if title%}
-    <title>Personal Gallery - {{title}}</title>
+    <title>Gallery - {{title}}</title>
     {%else%}
-    <title>Personal Gallery</title>
+    <title>Gallery</title>
     {%endif%}
 
     {% block styles %}
     {% bootstrap_css %}
+    <link rel="shortcut icon" href="{% static 'favicon.ico'%}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
     
