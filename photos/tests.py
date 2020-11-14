@@ -24,4 +24,29 @@ class LocationTestClass(TestCase):
     def test_save_method(self):
         self.nairobi.save_location()
         locations = Location.objects.all()
-        self.assertTrue(len(locations)>0)               
+        self.assertTrue(len(locations)>0)    
+
+class ImageTestClass(TestCase):
+    def setUp(self):
+        self.flowers = Category(name = 'Flowers')
+        self.flowers.save_category()
+
+        self.locations = Location(name='Nairobi')
+        self.locations.save_location()
+
+        self.new_image=Image(image_name='rose',image_description='A beautiful flower',image_category=self.flowers,image_location=self.locations)
+        self.new_image.save_image()
+
+    def tearDown(self):
+        Category.objects.all().delete()
+        Location.objects.all().delete()
+        Image.objects.all().delete()
+
+    def test_get_images(self):
+        all_images = Image.get_images()
+        self.assertTrue(len(all_images)>0)
+
+    def test_filter_by_location(self):
+        test_location_id = 6
+        images_location = Image.filter_by_location(test_location_id) 
+        self.assertTrue(len(images_location) == 0)   
