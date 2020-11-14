@@ -18,13 +18,30 @@
         <ul class="navbar-brand" style="list-style: none;  font-size: 20px; color: white !important;  ">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white !important; text-decoration: none; padding-left: 15%;">
-              Location
+              Locations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {% for location in locations %}
              
                 <a href="/location/{{location.id}}" class="available dropdown-item" style="color: red; ">
                   {{location.name}},
+          </a>
+              
+                
+               {% endfor %} 
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-brand" style="list-style: none;  font-size: 20px; color: white !important;  ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white !important; text-decoration: none; padding-left: 15%;">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% for category in categories %}
+             
+                <a href="/category/{{category.id}}" class="available dropdown-item" style="color: red; ">
+                  {{category.name}},
           </a>
               
                 

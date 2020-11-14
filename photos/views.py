@@ -11,7 +11,11 @@ def photos(request):
 
 def photos_by_location(request, location_id):
     images = Image.filter_by_location(location_id) 
-    return render(request,'all-photos/location.html',{"images":images})   
+    return render(request,'all-photos/location.html',{"images":images}) 
+
+def photos_by_category(request, category_id):
+    images = Image.filter_by_category(category_id) 
+    return render(request,'all-photos/category.html',{"images":images}) 
 
 def search_images(request):
 
