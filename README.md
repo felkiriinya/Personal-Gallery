@@ -37,6 +37,6 @@ Technologies used to develop this application:
 
 Should you be unable to access the website, have any recommendations and/or questions, feel free to email me:[felkiriinya@gmail.com](mailto:felkiriinya@gmail.com)
 
-## [License]()
+## [License](https://github.com/felkiriinya/Personal-Gallery/blob/master/LICENSE)
 
 Copyright (c) 2020 [Felista Kiriinya](https://github.com/felkiriinya)
