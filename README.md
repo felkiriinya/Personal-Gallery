@@ -7,7 +7,7 @@
 Gallery is an application that allows the admin to add photos for display and users are able to view them and also their details.
 
 ## Live link
-Visit the application on  
+Visit the application on https://felista-gallery.herokuapp.com/ .
 
 ## Figma Link
 This is the [figma](https://www.figma.com/file/JlQDwf4mbN0kJoO6EtYZUV/Gallery?node-id=0%3A1) link to my design.
