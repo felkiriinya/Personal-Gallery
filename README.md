@@ -6,6 +6,8 @@
 ## Description
 Gallery is an application that allows the admin to add photos for display and users are able to view them and also their details.
 
+![landing](./static/landing.png)
+
 ## Live link
 Visit the application on https://felista-gallery.herokuapp.com/ .
 
