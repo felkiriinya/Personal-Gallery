@@ -73,12 +73,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
-# Cloudinary settings
-CLOUDINARY = {
-  'cloud_name': 'duhceor4r',  
-     'api_key': '988552584751394',  
-  'api_secret': 'grnCc_TFy5WFWteERzMJRj3t88k',  
-}
+cloudinary.config( 
+  cloud_name = "duhceor4r", 
+  api_key = "988552584751394", 
+  api_secret = "grnCc_TFy5WFWteERzMJRj3t88k" 
+)
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',

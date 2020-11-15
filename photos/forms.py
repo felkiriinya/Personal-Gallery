@@ -4,4 +4,4 @@ from .models import Image
 class PhotoForm(ModelForm):
   class Meta:
       model = Image
-      fields = '__all__'
+      fields =('image',)
