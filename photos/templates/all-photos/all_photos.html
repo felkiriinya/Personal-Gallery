@@ -33,6 +33,11 @@
                   <h4><span style="font-family: Arial, Helvetica, sans-serif; color: rgb(212, 24, 24); font-weight: bold;">Location</span>: {{image.image_location.name}}</h4>
                 </div>
                 <div class="modal-footer">
+                  <div class="col-md-9">
+                    <input type="text" value="{{image.image.url}}" id="{{image.id}}.url">
+                    <button class="btn btn-outline-primary" onclick="copy('{{image.id}}.url')">Copy
+                        Link</button>
+                    </div>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   
                 </div>
@@ -43,4 +48,11 @@
     </div>
     
 </div>
+
+<script>
+  copy = (element) => {
+      document.getElementById(element).select();
+      document.execCommand("copy");
+  }
+</script>
 {%endblock%}
